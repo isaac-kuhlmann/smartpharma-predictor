@@ -1,8 +1,6 @@
-from time import sleep
 import csv
-
-from weekly_state import weekly_state
 import random
+from weekly_state import weekly_state
 
 class agent:
     """
@@ -84,12 +82,10 @@ class agent:
                     print('Untreated Patients over 10 weeks:', running_untreated)
                     print('Average Held In Stock over 10 weeks: ', stock_avg / 10)
                     data_writer.writerow([i, int(spent_avg), running_untreated])
-                # print('Average Reward:', running_avg, '\n')
                     running_order_avg = 0
                     running_stock_avg = 0
                     running_untreated = 0
                     running_spent = 0
-                # sleep()
 
 
     def print_episode(self, stock1, stock2, action, reward):
